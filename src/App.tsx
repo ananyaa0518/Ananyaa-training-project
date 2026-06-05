@@ -1,10 +1,12 @@
 import Navbar from './components/layout/navbar';
 import AppRoutes from './navigation/AppRoutes';
+import Footer from './components/layout/footer';
 function App() {
   return (
     <>
       <Navbar />
       <AppRoutes />
+      <Footer />
     </>
   );
 }

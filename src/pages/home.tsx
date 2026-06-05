@@ -1,7 +1,13 @@
+import HeroSection from '../components/common/ HeroSection';
+import BlogPreview from '../components/common/BlogPreview';
+import CTASection from '../components/common/CTASection';
+
 function Home() {
   return (
     <div>
-      <h1>Home Page</h1>
+      <HeroSection />
+      <BlogPreview />
+      <CTASection />
     </div>
   );
 }
