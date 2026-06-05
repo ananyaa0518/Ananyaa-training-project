@@ -7,8 +7,8 @@ import Contact from "../pages/contact";
 import Blog from "../pages/blog";
 import BlogDetails from "../pages/blogdetails";
 import PrivacyPolicy from "../pages/privacypolicy";
-import TermsConditions from "../pages/TermsConditions";
 import Feature from "../pages/feature";
+import TermsConditions from "../pages/termsconditions";
 
 function AppRoutes() {
     return (
