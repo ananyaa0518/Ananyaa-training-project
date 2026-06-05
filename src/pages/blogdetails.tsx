@@ -3,6 +3,6 @@ function BlogDetails() {
     <div>
       <h1>BlogDetails Page</h1>
     </div>
-  )
+  );
 }
-export default BlogDetails
+export default BlogDetails;

@@ -3,6 +3,6 @@ function Pricing() {
     <div>
       <h1>Pricing Page</h1>
     </div>
-  )
+  );
 }
-export default Pricing
+export default Pricing;

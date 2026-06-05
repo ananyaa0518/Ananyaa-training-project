@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 function Navbar() {
   return (
-   <nav className="navbar">
+    <nav className="navbar">
       <div className="logo">
         <Link to="/">JR.POS</Link>
       </div>
