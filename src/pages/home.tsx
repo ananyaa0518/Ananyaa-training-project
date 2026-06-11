@@ -1,5 +1,6 @@
 import Button from '../components/ui/button';
 import dashboard from '../assets/image/dashboard.jpeg';
+import PricingCard from '../components/ui/pricingcard';
 function Home() {
   return (
     <>
@@ -70,7 +71,6 @@ shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
           </div>
         </div>
       </section>
-
       <section className="bg-[#F8F8F8] py-24">
         <div className="mx-auto max-w-[1200px]">
           <p className="mb-4 text-center text-xs font-semibold tracking-[4px] text-[#163B69]">
@@ -147,7 +147,6 @@ shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
           </div>
         </div>
       </section>
-
       {/* Blue Strip */}
       <section className="bg-[#163B69] py-4">
         <div className="mx-auto flex max-w-[1280px] justify-around text-center text-white">
@@ -177,6 +176,134 @@ shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
             <p className="mt-1 text-[11px] text-gray-300">
               Years in Every Plan
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="bg-[#F7F2EA] py-24">
+        <div className="mx-auto max-w-[1280px]">
+          <p className="text-center text-xs font-semibold tracking-[4px] text-[#163B69]">
+            TRANSPARENT PRICING
+          </p>
+
+          <h2 className="mt-4 text-center text-[56px] font-bold text-[#444B55]">
+            One price for all features.
+            <br />
+            Upgrade as <span className="text-[#F4A300]">inventory grows.</span>
+          </h2>
+
+          <p className="mt-4 text-center text-gray-500">
+            No hidden fees. No per-user charges. Ever.
+          </p>
+
+          <div className="mt-16 grid grid-cols-3 gap-8">
+            <PricingCard
+              category="FREE"
+              title="30-DAY TRIAL"
+              price="$0"
+              subtitle="NO PAYMENT REQUIRED • 30-DAY FREE TRIAL"
+              buttonText="GET STARTED FREE"
+              features={[
+                'Full access to all JRpos features for 30 days',
+                'Unlimited users — your whole team can log in',
+                'Multi-currency & 47+ language support',
+                'Sales, inventory, expense & income modules',
+                'Customer Due List & loyalty programme',
+                'WhatsApp receipt delivery',
+                'Monthly Live Zoom Demo included',
+              ]}
+            />
+
+            <PricingCard
+              category="STARTUP"
+              title="MICRO-BUSINESSES & SOLE TRADERS"
+              price="$20.90"
+              subtitle="100 PRODUCTS • UNLIMITED USERS • 30D BILLING"
+              buttonText="GET STARTED"
+              badge="MOST POPULAR"
+              featured
+              features={[
+                'Up to 100 products in your catalogue',
+                'Unlimited users — no per-seat charges',
+                'All JRpos features fully included',
+                'Multi-currency & 47+ language support',
+                'Sales, POS, inventory & reporting',
+                'Customer Due List & loyalty points',
+                'WhatsApp 24/7 support',
+                'Monthly Live Zoom Demo',
+                'Lifetime free updates & new features',
+              ]}
+            />
+
+            <PricingCard
+              category="MIDSIZE"
+              title="RETAIL, RESTAURANTS & CAFES"
+              price="$33.00"
+              subtitle="RETAIL, RESTAURANTS & CAFES"
+              buttonText="GET STARTED"
+              features={[
+                'Up to 1,000 products in your catalogue',
+                'Unlimited users — no per-seat charges',
+                'All JRpos features fully included',
+                'Multi-currency & 47+ language support',
+                'Full sales, POS & supplier management',
+                'Advanced reporting',
+                'Customer Due List & subscriptions',
+                'AI Product Search configuration',
+                'Product Location Maps',
+              ]}
+            />
+          </div>
+
+          <div className="mt-8 grid grid-cols-3 gap-8">
+            <PricingCard
+              category="ENTERPRISE"
+              title="LARGE BUSINESS"
+              price="$64.90"
+              subtitle="SUPERMARKETS & MULTI-SITE OPS"
+              buttonText="GET STARTED"
+              features={[
+                'Up to 10,000 products',
+                'Unlimited users',
+                'All JRpos features fully included',
+                'Multi-location stock transfers',
+                'Advanced reporting',
+                'AI Product Search & Location Maps',
+              ]}
+            />
+
+            <PricingCard
+              category="CUSTOM"
+              title="CONTACT US"
+              price="POA"
+              subtitle="PRICE ON APPLICATION"
+              buttonText="GET STARTED"
+              features={[
+                'Unlimited products & users',
+                'Custom feature development',
+                'White-label branding',
+                'Custom API integrations',
+                'SLA-backed support',
+                'Dedicated onboarding',
+              ]}
+            />
+
+            <PricingCard
+              category="ADD-ON SERVICE"
+              title="UPLOAD MY DATA"
+              price="$550"
+              subtitle="INC GST • ONE-TIME FEE"
+              buttonText="REQUEST MIGRATION"
+              features={[
+                'Professional data import',
+                'Product catalogue import',
+                'Opening stock migration',
+                'Supplier migration',
+                'Customer migration',
+                'Review & verification',
+              ]}
+            />
           </div>
         </div>
       </section>
