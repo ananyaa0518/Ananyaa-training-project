@@ -1,6 +1,16 @@
 import Button from '../components/ui/button';
 import dashboard from '../assets/image/dashboard.jpeg';
 import PricingCard from '../components/ui/pricingcard';
+import dashboard1 from '../assets/image/dashboard1.jpeg';
+import dashboard2 from '../assets/image/dashboard2.jpeg';
+import dashboard3 from '../assets/image/dashboard.jpeg';
+import TestimonialCard from '../components/ui/testimonialcard';
+
+import blog1 from '../assets/image/blog1.jpeg';
+import blog2 from '../assets/image/blog2.jpeg';
+import blog3 from '../assets/image/blog3.jpeg';
+
+import BlogCard from '../components/ui/blogcard';
 function Home() {
   return (
     <>
@@ -303,6 +313,128 @@ shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
                 'Customer migration',
                 'Review & verification',
               ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Dashboard*/}
+      <section className="bg-[#F8F8F8] py-24">
+        <div className="mx-auto max-w-[1280px]">
+          <p className="text-center text-xs font-semibold tracking-[4px] text-[#163B69]">
+            FLEXIBLE INTERFACES
+          </p>
+
+          <h2 className="mt-4 text-center text-[52px] font-bold leading-[58px] text-[#444B55]">
+            The flexibility of both <span className="text-[#F4A300]">Web</span>
+            <br />
+            <span className="text-[#F4A300]">and Mobile</span> interfaces.
+          </h2>
+
+          <div className="mt-16 flex justify-center gap-6">
+            <img
+              src={dashboard1}
+              alt="Dashboard 1"
+              className="h-[300px] w-[390px] rounded-[24px] border-[8px] border-[#D2D8DE] object-cover shadow-sm"
+            />
+
+            <img
+              src={dashboard2}
+              alt="Dashboard 2"
+              className="h-[300px] w-[390px] rounded-[24px] border-[8px] border-[#D2D8DE] object-cover shadow-sm"
+            />
+
+            <img
+              src={dashboard3}
+              alt="Dashboard 3"
+              className="h-[300px] w-[390px] rounded-[24px] border-[8px] border-[#D2D8DE] object-cover shadow-sm"
+            />
+          </div>
+
+          <div className="mt-10 flex justify-center gap-2">
+            <div className="h-2 w-10 rounded-full bg-[#F4A300]"></div>
+            <div className="h-2 w-2 rounded-full bg-gray-300"></div>
+            <div className="h-2 w-2 rounded-full bg-gray-300"></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F8F8F8] py-24">
+        <div className="mx-auto max-w-[1280px]">
+          <p className="text-center text-xs font-semibold tracking-[4px] text-[#163B69]">
+            CLIENT VOICES
+          </p>
+
+          <h2 className="mt-4 text-center text-[56px] font-bold leading-[62px] text-[#444B55]">
+            What our customers
+            <br />
+            <span className="text-[#F4A300]">are saying.</span>
+          </h2>
+
+          <div className="mt-16 grid grid-cols-3 gap-8">
+            <TestimonialCard
+              initials="SJ"
+              name="Sarah Jenkins"
+              role="CEO, Stone Retail Group"
+              review="JRPOS was the best decision for our 12-store chain. No more per-seat fees for onboarding new staff."
+            />
+
+            <TestimonialCard
+              initials="SJ"
+              name="Sarah Jenkins"
+              role="CEO, Stone Retail Group"
+              review="JRPOS was the best decision for our 12-store chain. No more per-seat fees for onboarding new staff."
+            />
+
+            <TestimonialCard
+              initials="SJ"
+              name="Sarah Jenkins"
+              role="CEO, Stone Retail Group"
+              review="JRPOS was the best decision for our 12-store chain. No more per-seat fees for onboarding new staff."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Insights & Resources */}
+      <section className="bg-[#F8F8F8] py-24">
+        <div className="mx-auto max-w-[1280px]">
+          <p className="text-center text-xs font-semibold tracking-[4px] text-[#163B69]">
+            INSIGHTS & RESOURCES
+          </p>
+
+          <h2 className="mt-4 text-center text-[56px] font-bold leading-[62px] text-[#444B55]">
+            Stay ahead of
+            <br />
+            <span className="text-[#F4A300]">commerce.</span>
+          </h2>
+
+          <div className="mt-16 grid grid-cols-3 gap-8">
+            <BlogCard
+              image={blog1}
+              category="Blog"
+              title="How to Scale Your Retail Inventory Across 10+ Locations"
+              description="Learn the proven frameworks used by leading retailers to manage stock levels without spreadsheets."
+              author="Olivia Rhye"
+              date="20 Jan 2022"
+            />
+
+            <BlogCard
+              image={blog2}
+              category="Product"
+              title="Migrating to Linear 101"
+              description="Linear helps streamline software projects, sprints, tasks, and bug tracking."
+              author="Phoenix Baker"
+              date="19 Jan 2022"
+            />
+
+            <BlogCard
+              image={blog3}
+              category="Software Engineering"
+              title="Building your API Stack"
+              description="The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them."
+              author="Lana Steiner"
+              date="18 Jan 2022"
             />
           </div>
         </div>
