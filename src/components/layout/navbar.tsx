@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-
+import logo from '../../assets/image/logo.png';
 function Navbar() {
   return (
     <nav className="bg-white border-b">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link to="/">
-          <img src="/logo.png" alt="JR POS" className="h-12 w-auto" />
+          <img src={logo} alt="JR POS" className="h-12 w-auto" />
         </Link>
         <div className="flex items-center gap-10">
           <Link to="/features" className="font-medium text-[#163b69]">

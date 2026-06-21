@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import qrCode from '../../assets/icons/qrcode.jpeg';
 import googlePlay from '../../assets/icons/google-play.jpeg';
 import appStore from '../../assets/icons/apple.jpeg';
+import logo from '../../assets/image/logo.png';
 
 function Footer() {
   const features = ['Stock', 'Expense', 'Income', 'Products'];
@@ -12,7 +13,7 @@ function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           {/* Logo */}
           <div>
-            <h2 className="mb-3 text-3xl font-bold">JR POS</h2>
+            <img src={logo} alt="JR POS Logo" className="h-16 w-16" />
 
             <p className="mb-6 text-sm leading-6 text-gray-300">
               The enterprise POS platform built for ambitious retailers.

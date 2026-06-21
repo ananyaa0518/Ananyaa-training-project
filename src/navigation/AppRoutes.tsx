@@ -23,6 +23,7 @@ function AppRoutes() {
       <Route path="/blog/:id" element={<BlogDetails />} />
       <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       <Route path="/termsconditions" element={<TermsConditions />} />
+      <Route path="/blogdetails" element={<BlogDetails />} />
     </Routes>
   );
 }

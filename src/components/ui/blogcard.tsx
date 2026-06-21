@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 type BlogCardProps = {
   image: string;
   category: string;
@@ -16,7 +18,10 @@ function BlogCard({
   date,
 }: BlogCardProps) {
   return (
-    <div className="overflow-hidden rounded-2xl bg-[#F7F2E7] shadow-sm">
+    <Link
+      to="/blogdetails"
+      className="block overflow-hidden rounded-2xl bg-[#F7F2E7] shadow-sm transition hover:shadow-lg"
+    >
       <img src={image} alt={title} className="h-[180px] w-full object-cover" />
 
       <div className="p-5">
@@ -44,7 +49,7 @@ function BlogCard({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
