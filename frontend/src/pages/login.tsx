@@ -1,5 +1,5 @@
-import Button from '../components/ui/button';
-import Input from '../components/ui/input';
+import Button from '../components/ui/button.tsx';
+import Input from '../components/ui/input.tsx';
 import logo from '../assets/image/logo.png';
 import FeatureCard from '../components/ui/FeatureCard.tsx';
 function Login() {
