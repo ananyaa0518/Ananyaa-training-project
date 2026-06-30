@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 type BlogCardProps = {
+  id?: string;
   image: string;
   category: string;
   title: string;
@@ -10,6 +11,7 @@ type BlogCardProps = {
 };
 
 function BlogCard({
+  id,
   image,
   category,
   title,
@@ -19,7 +21,7 @@ function BlogCard({
 }: BlogCardProps) {
   return (
     <Link
-      to="/blogdetails"
+      to={id ? `/blog/${id}` : '/blogdetails'}
       className="block overflow-hidden rounded-2xl bg-[#F7F2E7] shadow-sm transition hover:shadow-lg"
     >
       <img src={image} alt={title} className="h-[180px] w-full object-cover" />
