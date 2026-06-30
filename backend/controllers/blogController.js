@@ -1,60 +1,112 @@
-const Blog = require("../models/Blog");
+const blogs = require("../data/blogs");
 
-// CREATE
-exports.createBlog = async (req, res) => {
+exports.getBlogs = (req, res) => {
   try {
-    const blog = await Blog.create(req.body);
-
-    res.status(201).json(blog);
+    res.status(200).json(blogs);
   } catch (err) {
-    res.status(500).json(err);
-  }
-};
-
-// GET ALL
-exports.getBlogs = async (req, res) => {
-  try {
-    const blogs = await Blog.find();
-
-    res.json(blogs);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-};
-
-// GET SINGLE
-exports.getBlog = async (req, res) => {
-  try {
-    const blog = await Blog.findById(req.params.id);
-
-    res.json(blog);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-};
-
-// UPDATE
-exports.updateBlog = async (req, res) => {
-  try {
-    const blog = await Blog.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
+    res.status(500).json({ 
+      message: "Error retrieving blogs", 
+      error: err.message 
     });
-
-    res.json(blog);
-  } catch (err) {
-    res.status(500).json(err);
   }
 };
 
-// DELETE
-exports.deleteBlog = async (req, res) => {
+exports.getBlog = (req, res) => {
   try {
-    await Blog.findByIdAndDelete(req.params.id);
+    const blogId = req.params.id;
+    const blog = blogs.find((item) => item._id === blogId);
 
-    res.json({
-      message: "Blog deleted",
-    });
+    if (!blog) {
+      return res.status(404).json({ message: `Blog with ID ${blogId} not found` });
+    }
+
+    res.status(200).json(blog);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json({ 
+      message: "Error retrieving the blog", 
+      error: err.message 
+    });
+  }
+};
+
+exports.createBlog = (req, res) => {
+  try {
+    const { title, content, image, author } = req.body;
+
+    if (!title || !content) {
+      return res.status(400).json({ message: "Title and content are required fields." });
+    }
+
+    const newBlog = {
+      _id: Date.now().toString(),
+      title: title,
+      content: content,
+      image: image || "",
+      author: author || "Anonymous",
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    blogs.push(newBlog);
+
+    res.status(201).json(newBlog);
+  } catch (err) {
+    res.status(500).json({ 
+      message: "Error creating the blog", 
+      error: err.message 
+    });
+  }
+};
+
+exports.updateBlog = (req, res) => {
+  try {
+    const blogId = req.params.id;
+    const { title, content, image, author } = req.body;
+
+    const blogIndex = blogs.findIndex((item) => item._id === blogId);
+
+    if (blogIndex === -1) {
+      return res.status(404).json({ message: `Blog with ID ${blogId} not found` });
+    }
+
+    const existingBlog = blogs[blogIndex];
+
+    const updatedBlog = {
+      ...existingBlog,
+      title: title !== undefined ? title : existingBlog.title,
+      content: content !== undefined ? content : existingBlog.content,
+      image: image !== undefined ? image : existingBlog.image,
+      author: author !== undefined ? author : existingBlog.author,
+      updatedAt: new Date().toISOString()
+    };
+
+    blogs[blogIndex] = updatedBlog;
+
+    res.status(200).json(updatedBlog);
+  } catch (err) {
+    res.status(500).json({ 
+      message: "Error updating the blog", 
+      error: err.message 
+    });
+  }
+};
+
+exports.deleteBlog = (req, res) => {
+  try {
+    const blogId = req.params.id;
+    const blogIndex = blogs.findIndex((item) => item._id === blogId);
+
+    if (blogIndex === -1) {
+      return res.status(404).json({ message: `Blog with ID ${blogId} not found` });
+    }
+
+    blogs.splice(blogIndex, 1);
+
+    res.status(200).json({ message: "Blog deleted" });
+  } catch (err) {
+    res.status(500).json({ 
+      message: "Error deleting the blog", 
+      error: err.message 
+    });
   }
 };
