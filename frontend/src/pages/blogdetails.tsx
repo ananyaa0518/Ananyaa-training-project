@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getBlogById, deleteBlog } from '../services/blogService';
+import { getBlogById } from '../services/blogService';
 import type { Blog } from '../types/blog';
 import blog2 from '../assets/image/blog2.jpeg';
 import dashboard from '../assets/image/dashboard.jpeg';
@@ -24,13 +24,6 @@ function BlogDetails() {
     getBlogById(blogId).then((data) => setBlog(data));
   }, [id]);
 
-  const handleDelete = async () => {
-    if (blog && blog._id) {
-      await deleteBlog(blog._id);
-      navigate('/blog');
-    }
-  };
-
   if (!blog) {
     return (
       <main className="bg-[#F8F8F8] py-20 text-center text-gray-500">
@@ -47,6 +40,13 @@ function BlogDetails() {
   return (
     <main className="bg-[#F8F8F8]">
       <div className="mx-auto max-w-[1280px] px-8 py-12">
+        <button
+          onClick={() => navigate(-1)}
+          className="mb-8 flex items-center gap-2 font-medium text-gray-600 hover:text-gray-900 cursor-pointer"
+        >
+          ← Back
+        </button>
+
         <h1 className="max-w-[1000px] text-[52px] font-bold leading-tight text-[#2F3540]">
           {displayTitle}
         </h1>
@@ -57,23 +57,13 @@ function BlogDetails() {
           className="mt-10 w-full rounded-lg"
         />
 
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-8 text-sm text-gray-500">
-          <div className="flex items-center gap-8">
-            <span>{displayAuthor}</span>
-            <span>{displayDate}</span>
-            <span>10 Minutes Read</span>
-          </div>
-          {blog._id && (
-            <button
-              onClick={handleDelete}
-              className="rounded bg-red-600 px-4 py-2 font-medium text-white hover:bg-red-700"
-            >
-              Delete Post
-            </button>
-          )}
+        <div className="mt-8 flex flex-wrap items-center gap-8 text-sm text-gray-500">
+          <span>{displayAuthor}</span>
+          <span>{displayDate}</span>
+          <span>10 Minutes Read</span>
         </div>
 
-        <div className="mt-12 space-y-8 text-[16px] leading-8 text-gray-600">
+        <div className="mt-12 max-w-[1000px] space-y-8 text-[16px] leading-8 text-gray-600">
           {blog.content ? (
             blog.content.split('\n').map((paragraph, index) => (
               <p key={index}>{paragraph}</p>

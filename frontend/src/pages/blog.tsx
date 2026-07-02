@@ -15,10 +15,14 @@ const imageMap: Record<string, string> = {
 
 function Blog() {
   const [blogs, setBlogs] = useState<BlogType[]>([]);
+  const [visibleBlogs, setVisibleBlogs] = useState(3);
 
   useEffect(() => {
     getBlogs().then((data) => setBlogs(data));
   }, []);
+
+  const repeatedBlogs = [...blogs, ...blogs, ...blogs];
+  const displayedBlogs = repeatedBlogs.slice(0, visibleBlogs);
 
   return (
     <>
@@ -56,7 +60,7 @@ function Blog() {
           </h2>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[...blogs, ...blogs, ...blogs].map((blog, index) => (
+            {displayedBlogs.map((blog, index) => (
               <BlogCard
                 key={blog._id ? `${blog._id}-${index}` : index}
                 id={blog._id}
@@ -70,11 +74,16 @@ function Blog() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <button className="rounded-md bg-[#F4A300] px-8 py-3 font-medium text-black hover:bg-[#E89A00]">
-              Load More Articles
-            </button>
-          </div>
+          {visibleBlogs < repeatedBlogs.length && (
+            <div className="mt-12 text-center">
+              <button
+                onClick={() => setVisibleBlogs((prev) => prev + 3)}
+                className="rounded-md bg-[#F4A300] px-8 py-3 font-medium text-black hover:bg-[#E89A00] cursor-pointer"
+              >
+                Load More Articles
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>
