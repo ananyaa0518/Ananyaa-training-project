@@ -9,12 +9,14 @@ import BlogDetails from '../pages/blogdetails';
 import PrivacyPolicy from '../pages/privacypolicy';
 import Feature from '../pages/feature';
 import TermsConditions from '../pages/termsconditions';
+import Admin from '../pages/admin';
 
 function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/admin" element={<Admin />} />
       <Route path="/features" element={<Feature />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/about" element={<About />} />
@@ -28,3 +30,4 @@ function AppRoutes() {
   );
 }
 export default AppRoutes;
+
