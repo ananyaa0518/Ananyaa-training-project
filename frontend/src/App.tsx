@@ -8,7 +8,7 @@ import CTA from './components/ui/cta';
 function App() {
   const location = useLocation();
 
-  const hideLayout = location.pathname === '/login' || location.pathname === '/admin';
+  const hideLayout = location.pathname === '/login' || location.pathname.startsWith('/admin');
 
   return (
     <>

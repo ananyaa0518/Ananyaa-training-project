@@ -52,7 +52,7 @@ function Admin() {
               </div>
               <Button
                 variant="primary"
-                onClick={() => {}}
+                onClick={() => navigate('/admin/blogs/create')}
                 className="mt-6 w-full text-sm py-2 px-4 rounded-lg cursor-pointer"
               >
                 Add Blog
@@ -67,7 +67,7 @@ function Admin() {
               </div>
               <Button
                 variant="secondary"
-                onClick={() => {}}
+                onClick={() => navigate('/admin/blogs')}
                 className="mt-6 w-full text-sm py-2 px-4 rounded-lg cursor-pointer"
               >
                 Manage Blogs

@@ -10,6 +10,9 @@ import PrivacyPolicy from '../pages/privacypolicy';
 import Feature from '../pages/feature';
 import TermsConditions from '../pages/termsconditions';
 import Admin from '../pages/admin';
+import AdminBlogs from '../pages/adminblogs';
+import CreateBlog from '../pages/createblog';
+import EditBlog from '../pages/editblog';
 
 function AppRoutes() {
   return (
@@ -17,6 +20,9 @@ function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/admin" element={<Admin />} />
+      <Route path="/admin/blogs" element={<AdminBlogs />} />
+      <Route path="/admin/blogs/create" element={<CreateBlog />} />
+      <Route path="/admin/blogs/edit/:id" element={<EditBlog />} />
       <Route path="/features" element={<Feature />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/about" element={<About />} />
@@ -30,4 +36,5 @@ function AppRoutes() {
   );
 }
 export default AppRoutes;
+
 
