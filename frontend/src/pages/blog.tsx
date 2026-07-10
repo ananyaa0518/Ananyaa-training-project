@@ -26,7 +26,7 @@ function Blog() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-[#1A3A5C] py-28">
+      <section className="relative overflow-hidden bg-[#1A3A5C] py-16 md:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#2D5E9E_0%,#163B69_65%,#12345B_100%)]" />
 
         <div
@@ -38,24 +38,24 @@ function Blog() {
           }}
         />
 
-        <div className="relative z-10 mx-auto max-w-[1280px] px-8 text-center">
-          <h1 className="mx-auto text-center text-[64px] font-bold leading-[1.05] text-white">
+        <div className="relative z-10 mx-auto max-w-[1280px] px-6 sm:px-8 text-center">
+          <h1 className="mx-auto text-center text-4xl sm:text-5xl lg:text-[64px] font-bold leading-tight text-white">
             Practical Retail Insights
             <br />
             for
             <span className="text-[#F4D6A6]"> Real Businesses.</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-[650px] text-[18px] leading-8 text-[#B8C6D9]">
+          <p className="mx-auto mt-6 max-w-[650px] text-base sm:text-[18px] leading-relaxed sm:leading-8 text-[#B8C6D9]">
             Strategies, tutorials, and stories from the world of retail POS —
             written for the people who actually run the floor.
           </p>
         </div>
       </section>
 
-      <section className="bg-[#F8F8F8] py-20">
-        <div className="mx-auto max-w-[1280px] px-8">
-          <h2 className="mb-12 text-[48px] font-bold text-[#2F3540]">
+      <section className="bg-[#F8F8F8] py-16 md:py-20">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-8">
+          <h2 className="mb-12 text-3xl sm:text-[48px] font-bold text-[#2F3540] leading-tight">
             Latest Articles
           </h2>
 

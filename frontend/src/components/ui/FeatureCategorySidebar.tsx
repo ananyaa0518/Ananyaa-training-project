@@ -4,7 +4,7 @@ type Props = {
 
 function FeatureCategorySidebar({ categories }: Props) {
   return (
-    <div className="w-[240px]">
+    <div className="w-full lg:w-[240px] shrink-0">
       <p className="mb-6 text-[11px] font-bold uppercase tracking-[2px] text-[#1E3A5F]">
         Feature Categories
       </p>
