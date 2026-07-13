@@ -37,12 +37,12 @@ function Login() {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden">
-      <div className="flex w-1/2 flex-col justify-between bg-[#163B69] px-16 py-12 text-white">
+    <div className="flex flex-col lg:flex-row min-h-screen overflow-y-auto lg:overflow-hidden lg:h-screen">
+      <div className="flex w-full lg:w-1/2 flex-col justify-between bg-[#163B69] px-8 py-12 lg:px-16 text-white">
         <div>
           <img src={logo} alt="JR POS" className="mb-10 w-24" />
 
-          <h1 className="text-5xl font-bold leading-tight">
+          <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
             YOUR BUSINESS,
             <br />
             <span className="text-[#F4A300]">FULLY IN CONTROL.</span>
@@ -74,14 +74,14 @@ function Login() {
           </div>
         </div>
 
-        <p className="text-xs text-gray-300">
+        <p className="text-xs text-gray-300 mt-8 lg:mt-0">
           © 2026 SEEN Pty Ltd · jrpos.app · support@jrpos.app
         </p>
       </div>
 
-      <div className="flex w-1/2 items-center justify-center bg-[#F8F8F8] px-16">
+      <div className="flex w-full lg:w-1/2 items-center justify-center bg-[#F8F8F8] px-8 py-12 lg:px-16">
         <div className="w-full max-w-lg">
-          <h1 className="text-5xl font-bold text-black">Login</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold text-black">Login</h1>
 
           <p className="mt-3 text-base text-gray-500">
             Enter your operator credentials to continue

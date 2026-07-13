@@ -39,7 +39,7 @@ function BlogDetails() {
 
   return (
     <main className="bg-[#F8F8F8]">
-      <div className="mx-auto max-w-[1280px] px-8 py-12">
+      <div className="mx-auto max-w-[1280px] px-6 sm:px-8 py-12">
         <button
           onClick={() => navigate(-1)}
           className="mb-8 flex items-center gap-2 font-medium text-gray-600 hover:text-gray-900 cursor-pointer"
@@ -47,23 +47,23 @@ function BlogDetails() {
           ← Back
         </button>
 
-        <h1 className="max-w-[1000px] text-[52px] font-bold leading-tight text-[#2F3540]">
+        <h1 className="max-w-[1000px] text-3xl sm:text-4xl lg:text-[52px] font-bold leading-tight text-[#2F3540]">
           {displayTitle}
         </h1>
 
         <img
           src={displayImage}
           alt={displayTitle}
-          className="mt-10 w-full rounded-lg"
+          className="mt-10 w-full max-h-[300px] sm:max-h-[500px] object-cover rounded-lg border"
         />
 
-        <div className="mt-8 flex flex-wrap items-center gap-8 text-sm text-gray-500">
+        <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-8 text-sm text-gray-500">
           <span>{displayAuthor}</span>
           <span>{displayDate}</span>
           <span>10 Minutes Read</span>
         </div>
 
-        <div className="mt-12 max-w-[1000px] space-y-8 text-[16px] leading-8 text-gray-600">
+        <div className="mt-12 max-w-[1000px] space-y-8 text-base leading-relaxed sm:leading-8 text-gray-600">
           {blog.content ? (
             blog.content.split('\n').map((paragraph, index) => (
               <p key={index}>{paragraph}</p>

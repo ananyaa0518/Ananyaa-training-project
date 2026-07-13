@@ -4,8 +4,7 @@ import PricingCard from '../components/ui/pricingcard';
 function Pricing() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-[#163B69] py-28">
+      <section className="relative overflow-hidden bg-[#163B69] py-16 md:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#2D5E9E_0%,#163B69_65%,#12345B_100%)]" />
 
         <div
@@ -17,14 +16,14 @@ function Pricing() {
           }}
         />
 
-        <div className="relative z-10 mx-auto max-w-[1280px] px-8 text-center">
-          <h1 className="text-[64px] font-bold leading-[1.05] text-white">
+        <div className="relative z-10 mx-auto max-w-[1280px] px-6 sm:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-bold leading-tight text-white">
             Pick Your Catalogue Size.
             <br />
             <span className="text-[#F4D6A6]">Get Everything</span> Else Free.
           </h1>
 
-          <p className="mx-auto mt-6 max-w-[650px] text-[18px] leading-8 text-[#B8C6D9]">
+          <p className="mx-auto mt-6 max-w-[650px] text-base sm:text-[18px] leading-relaxed sm:leading-8 text-[#B8C6D9]">
             Powerful cloud POS software built for startups, retailers,
             restaurants, wholesalers and enterprises — with unlimited users on
             every plan.
@@ -32,20 +31,19 @@ function Pricing() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="bg-[#F7F2EA] py-24">
-        <div className="mx-auto max-w-[1280px] px-8">
+      <section className="bg-[#F7F2EA] py-16 md:py-24">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-8">
           <p className="text-center text-xs font-semibold tracking-[4px] text-[#163B69]">
             TRANSPARENT PRICING
           </p>
 
-          <h2 className="mt-4 text-center text-[56px] font-bold leading-[62px] text-[#444B55]">
+          <h2 className="mt-4 text-center text-3xl sm:text-4xl lg:text-[56px] font-bold leading-tight text-[#444B55]">
             One price for all features.
             <br />
             Upgrade as <span className="text-[#F4A300]">inventory grows.</span>
           </h2>
 
-          <p className="mt-4 text-center text-[#7A7A7A]">
+          <p className="mt-4 text-center text-[#7A7A7A] text-sm md:text-base">
             No hidden fees. No per-user charges. Ever.
           </p>
 
@@ -57,8 +55,7 @@ function Pricing() {
             <span>Annual</span>
           </div>
 
-          {/* Row 1 */}
-          <div className="mt-16 grid gap-8 lg:grid-cols-3">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PricingCard
               category="FREE"
               title="30-DAY TRIAL"
@@ -117,8 +114,7 @@ function Pricing() {
             />
           </div>
 
-          {/* Row 2 */}
-          <div className="mt-8 grid gap-8 lg:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PricingCard
               category="ENTERPRISE"
               title="LARGE BUSINESS"
@@ -170,21 +166,20 @@ function Pricing() {
         </div>
       </section>
 
-      {/* Unlimited Users */}
-      <section className="bg-[#F8F8F8] py-24">
-        <div className="mx-auto grid max-w-[1280px] gap-12 px-8 lg:grid-cols-[1.1fr_1fr]">
+      <section className="bg-[#F8F8F8] py-16 md:py-24">
+        <div className="mx-auto grid max-w-[1280px] gap-12 px-6 sm:px-8 grid-cols-1 lg:grid-cols-[1.1fr_1fr]">
           <div>
             <p className="mb-4 text-xs font-semibold tracking-[4px] text-[#163B69]">
               WHY UNLIMITED USERS MATTERS
             </p>
 
-            <h2 className="text-[56px] font-bold leading-[62px] text-[#444B55]">
+            <h2 className="text-3xl sm:text-4xl lg:text-[56px] font-bold leading-tight text-[#444B55]">
               Your whole team.
               <br />
               One flat price. Always.
             </h2>
 
-            <p className="mt-8 text-[18px] leading-9 text-[#7A7A7A]">
+            <p className="mt-8 text-base sm:text-[18px] leading-relaxed sm:leading-9 text-[#7A7A7A]">
               Most POS systems charge per seat — meaning the more staff you
               have, the more you pay. JRpos is different. Every plan includes
               unlimited users at no extra cost.
@@ -192,34 +187,34 @@ function Pricing() {
           </div>
 
           <div className="grid grid-cols-2 border border-[#E6E6E6]">
-            <div className="border-b border-r p-8">
-              <h3 className="mb-3 font-bold text-[#444B55]">
+            <div className="border-b border-r p-6 sm:p-8">
+              <h3 className="mb-3 font-bold text-[#444B55] text-sm sm:text-base">
                 No surprise bills
               </h3>
-              <p className="text-[#7A7A7A]">
+              <p className="text-[#7A7A7A] text-xs sm:text-sm">
                 Add as many staff as you need at no extra cost.
               </p>
             </div>
 
-            <div className="border-b bg-[#F7F2EA] p-8">
-              <h3 className="mb-3 font-bold text-[#444B55]">
+            <div className="border-b bg-[#F7F2EA] p-6 sm:p-8">
+              <h3 className="mb-3 font-bold text-[#444B55] text-sm sm:text-base">
                 Team-wide access
               </h3>
-              <p className="text-[#7A7A7A]">
+              <p className="text-[#7A7A7A] text-xs sm:text-sm">
                 Every employee gets their own login.
               </p>
             </div>
 
-            <div className="border-r bg-[#F7F2EA] p-8">
-              <h3 className="mb-3 font-bold text-[#444B55]">Scale freely</h3>
-              <p className="text-[#7A7A7A]">
+            <div className="border-r bg-[#F7F2EA] p-6 sm:p-8">
+              <h3 className="mb-3 font-bold text-[#444B55] text-sm sm:text-base">Scale freely</h3>
+              <p className="text-[#7A7A7A] text-xs sm:text-sm">
                 Open new stores without extra software fees.
               </p>
             </div>
 
-            <div className="p-8">
-              <h3 className="mb-3 font-bold text-[#444B55]">Full control</h3>
-              <p className="text-[#7A7A7A]">
+            <div className="p-6 sm:p-8">
+              <h3 className="mb-3 font-bold text-[#444B55] text-sm sm:text-base">Full control</h3>
+              <p className="text-[#7A7A7A] text-xs sm:text-sm">
                 Granular role permissions for every staff member.
               </p>
             </div>
@@ -227,9 +222,8 @@ function Pricing() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="bg-[#163B69] py-4">
-        <div className="mx-auto flex max-w-[1280px] justify-around text-center text-white">
+      <section className="bg-[#163B69] py-8">
+        <div className="mx-auto flex flex-wrap justify-around gap-y-6 text-center text-white px-6 max-w-[1280px]">
           <div>
             <h3 className="text-2xl font-bold">
               5,000<span className="text-[#F4A300]">+</span>

@@ -5,11 +5,9 @@ import FeatureSection from '../components/ui/FeatureSection';
 function Feature() {
   return (
     <>
-      <section className="relative overflow-hidden bg-[#163B69] py-28">
-        {/* Blue gradient */}
+      <section className="relative overflow-hidden bg-[#163B69] py-16 md:py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#2D5E9E_0%,#163B69_65%,#12345B_100%)]" />
 
-        {/* Design image */}
         <div
           className="absolute inset-0 opacity-15"
           style={{
@@ -19,14 +17,13 @@ function Feature() {
           }}
         />
 
-        {/* Content */}
-        <div className="relative z-10 mx-auto max-w-[1280px] px-8 text-center">
-          <h1 className="mx-auto max-w-[700px] text-[64px] font-bold leading-[68px] text-white">
+        <div className="relative z-10 mx-auto max-w-[1280px] px-6 sm:px-8 text-center">
+          <h1 className="mx-auto max-w-[700px] text-4xl sm:text-5xl lg:text-[64px] font-bold leading-tight text-white">
             Every Tool Your Business
             <span className="text-[#FFDDB8]"> Needs.</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-[650px] text-[18px] leading-8 text-[#B8C6D9]">
+          <p className="mx-auto mt-6 max-w-[650px] text-base sm:text-[18px] leading-relaxed sm:leading-8 text-[#B8C6D9]">
             Unlike other POS systems that lock features behind higher tiers,
             every JRpos feature is included in every plan — from the free trial
             to Enterprise. The only difference between plans is the size of your
@@ -34,7 +31,8 @@ function Feature() {
           </p>
         </div>
       </section>
-      <div className="mx-auto flex max-w-[1280px] gap-20 px-8 py-24">
+
+      <div className="mx-auto flex flex-col lg:flex-row max-w-[1280px] gap-12 lg:gap-20 px-6 sm:px-8 py-16 md:py-24">
         <FeatureCategorySidebar
           categories={[
             'Point of Sale',
@@ -219,7 +217,7 @@ function Feature() {
                 description: 'Close registers accurately',
               },
             ]}
-          />{' '}
+          />
         </div>
       </div>
     </>
