@@ -31,8 +31,8 @@ function About() {
         <div className="relative z-10 mx-auto max-w-[1280px] px-6 sm:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-bold leading-tight text-white">
             We built the POS we always
-            <br />
-            <span className="text-[#F4D6A6]">wished existed.</span>
+            <br className="hidden sm:inline" />
+            <span className="text-[#F4D6A6]"> wished existed.</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-[650px] text-base sm:text-[18px] leading-relaxed sm:leading-8 text-[#B8C6D9]">

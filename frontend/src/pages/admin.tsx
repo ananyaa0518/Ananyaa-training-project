@@ -10,7 +10,7 @@ function Admin() {
       <div className="bg-white rounded-xl border p-6 md:p-8 shadow-sm">
         <h2 className="text-2xl font-bold text-[#2F3540] mb-6">Manage Blogs</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="border border-dashed border-gray-300 rounded-xl p-6 flex flex-col justify-between hover:border-[#F4A300] transition-colors bg-white">
             <div>
               <div className="text-3xl mb-4">➕</div>

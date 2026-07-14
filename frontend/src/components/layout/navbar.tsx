@@ -11,7 +11,7 @@ function Navbar() {
         <Link to="/">
           <img src={logo} alt="JR POS" className="h-12 w-auto" />
         </Link>
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-10">
           <Link to="/features" className="font-medium text-[#163b69]">
             Features
           </Link>
@@ -28,7 +28,7 @@ function Navbar() {
             Contact
           </Link>
         </div>
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
           <Link to="/login" className="font-semibold">
             Log In
           </Link>

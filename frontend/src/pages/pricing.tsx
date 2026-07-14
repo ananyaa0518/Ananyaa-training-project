@@ -55,7 +55,7 @@ function Pricing() {
             <span>Annual</span>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             <PricingCard
               category="FREE"
               title="30-DAY TRIAL"
@@ -114,7 +114,7 @@ function Pricing() {
             />
           </div>
 
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             <PricingCard
               category="ENTERPRISE"
               title="LARGE BUSINESS"
@@ -186,8 +186,8 @@ function Pricing() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 border border-[#E6E6E6]">
-            <div className="border-b border-r p-6 sm:p-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 border border-[#E6E6E6]">
+            <div className="border-b sm:border-r p-6 sm:p-8">
               <h3 className="mb-3 font-bold text-[#444B55] text-sm sm:text-base">
                 No surprise bills
               </h3>
@@ -205,7 +205,7 @@ function Pricing() {
               </p>
             </div>
 
-            <div className="border-r bg-[#F7F2EA] p-6 sm:p-8">
+            <div className="border-b sm:border-b-0 sm:border-r bg-[#F7F2EA] p-6 sm:p-8">
               <h3 className="mb-3 font-bold text-[#444B55] text-sm sm:text-base">Scale freely</h3>
               <p className="text-[#7A7A7A] text-xs sm:text-sm">
                 Open new stores without extra software fees.
