@@ -14,8 +14,8 @@ function Home() {
   return (
     <>
       <section className="bg-[#163B69]">
-        <div className="mx-auto flex flex-col lg:flex-row min-h-[500px] lg:min-h-[720px] max-w-[1400px] items-center justify-between px-6 sm:px-12 md:px-24 py-16 lg:py-0 gap-12 text-center lg:text-left">
-          <div className="max-w-[540px] flex flex-col items-center lg:items-start">
+        <div className="mx-auto flex flex-col lg:flex-row min-h-[500px] lg:min-h-[720px] max-w-[1400px] items-center justify-between px-6 sm:px-12 md:px-12 xl:px-24 py-16 lg:py-0 gap-8 lg:gap-12 xl:gap-16 text-center lg:text-left">
+          <div className="flex-1 max-w-[540px] flex flex-col items-center lg:items-start">
             <div className="mb-8 inline-flex rounded-full border border-[#2C4E7A] px-6 py-3">
               <span className="text-[10px] md:text-[12px] font-semibold uppercase tracking-[3px] text-[#F4A300]">
                 Built Different • Zero Success Tax
@@ -34,13 +34,13 @@ function Home() {
               and high-volume operations.
             </p>
 
-            <div className="flex gap-5">
-              <Button>View Price</Button>
-              <Button variant="secondary">Get a Demo</Button>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 w-full sm:w-auto">
+              <Button className="w-full sm:w-auto">View Price</Button>
+              <Button variant="secondary" className="w-full sm:w-auto">Get a Demo</Button>
             </div>
           </div>
 
-          <div className="relative w-full max-w-[650px]">
+          <div className="flex-1 relative w-full max-w-[650px]">
             <img
               src={dashboard}
               alt="POS Dashboard"
@@ -198,7 +198,7 @@ function Home() {
             No hidden fees. No per-user charges. Ever.
           </p>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             <PricingCard
               category="FREE"
               title="30-DAY TRIAL"
@@ -257,7 +257,7 @@ function Home() {
             />
           </div>
 
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             <PricingCard
               category="ENTERPRISE"
               title="LARGE BUSINESS"
@@ -321,7 +321,7 @@ function Home() {
             <span className="text-[#F4A300]">and Mobile</span> interfaces.
           </h2>
 
-          <div className="mt-16 flex flex-col md:flex-row justify-center gap-6 items-center">
+          <div className="mt-16 flex flex-col xl:flex-row justify-center gap-6 items-center">
             <img
               src={dashboard1}
               alt="Dashboard 1"

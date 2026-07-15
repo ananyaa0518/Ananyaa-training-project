@@ -22,7 +22,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 1024) {
+      if (window.innerWidth <= 1024) {
         setIsCollapsed(true);
       } else {
         setIsCollapsed(false);
@@ -50,14 +50,14 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
 
       <div
         className={`flex-grow flex flex-col min-w-0 transition-all duration-300
-          ${isCollapsed ? 'lg:pl-20' : 'lg:pl-64'}
+          ${isCollapsed ? 'md:pl-20' : 'md:pl-64'}
         `}
       >
         <header className="bg-white border-b h-20 flex items-center justify-between px-6 sticky top-0 z-30">
           <div className="flex items-center gap-4">
             <button
               onClick={() => setIsOpenMobile(!isOpenMobile)}
-              className="lg:hidden text-[#163B69] text-2xl focus:outline-none cursor-pointer"
+              className="md:hidden text-[#163B69] text-2xl focus:outline-none cursor-pointer"
             >
               ☰
             </button>

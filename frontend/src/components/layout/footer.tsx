@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer className="bg-[#173B69] text-white">
       <div className="mx-auto max-w-[1200px] px-6 py-12">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10">
           {/* Logo */}
           <div>
             <img src={logo} alt="JR POS Logo" className="h-16 w-16" />
@@ -74,7 +74,7 @@ function Footer() {
               Experience faster, smarter, and seamless mobile access.
             </p>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               <img
                 src={googlePlay}
                 alt="Google Play"

@@ -22,7 +22,7 @@ export default function Sidebar({ isCollapsed, isOpenMobile, onToggle, onCloseMo
       <aside
         className={`fixed top-0 bottom-0 left-0 z-40 bg-[#163B69] text-white transition-all duration-300 flex flex-col border-r border-blue-900
           ${isCollapsed ? 'w-20' : 'w-64'}
-          ${isOpenMobile ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+          ${isOpenMobile ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
         `}
       >
         <div className="h-20 flex items-center justify-between px-6 border-b border-blue-900">
@@ -33,7 +33,7 @@ export default function Sidebar({ isCollapsed, isOpenMobile, onToggle, onCloseMo
           )}
           <button
             onClick={onToggle}
-            className="hidden lg:block text-gray-300 hover:text-[#F4A300] focus:outline-none cursor-pointer"
+            className="hidden md:block text-gray-300 hover:text-[#F4A300] focus:outline-none cursor-pointer"
           >
             {isCollapsed ? '➡️' : '⬅️'}
           </button>

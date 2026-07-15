@@ -39,7 +39,7 @@ function Contact() {
 
       <section className="bg-[#F5EFE2] py-16 md:py-24">
         <div className="mx-auto max-w-[1440px] px-6 sm:px-8">
-          <div className="grid gap-12 grid-cols-1 lg:grid-cols-[720px_420px] lg:justify-center">
+          <div className="grid gap-12 grid-cols-1 lg:grid-cols-[1.7fr_1fr] xl:grid-cols-[720px_420px] lg:justify-center max-w-[1200px] mx-auto">
             <div className="rounded-[24px] bg-white p-6 sm:p-12 shadow-sm">
               <h2 className="mb-3 text-3xl sm:text-[36px] font-bold text-[#3B3F4A] leading-tight">
                 How can we help you?
